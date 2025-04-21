@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import {
   Container,
   Nav,
@@ -11,35 +11,35 @@ import {
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50)
-        }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <Container isScrolled={isScrolled}>
-            <Nav>
-                <Logo href="#">Portfolio</Logo>
+  return (
+    <Container isScrolled={isScrolled}>
+      <Nav>
+        <Logo href="#">Portfolio</Logo>
 
-                <MobileMenuButton onClick={toggleMenu} aria-label="Toggle menu">
-                    {isOpen ? <FaTimes /> : <FaBars />}
-                </MobileMenuButton>
+        <MobileMenuButton onClick={toggleMenu} aria-label="Toggle menu">
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </MobileMenuButton>
 
-                <NavLinks isOpen={isOpen}>
-                    <NavLink href="#">Projetos</NavLink>
-                    <NavLink href="#">Tecnologias</NavLink>
-                    <NavLink href="#">Sobre mim</NavLink>
-                </NavLinks>
-            </Nav>
-        </Container>
-    )
-}
+        <NavLinks isOpen={isOpen}>
+          <NavLink href="#">Projetos</NavLink>
+          <NavLink href="#">Tecnologias</NavLink>
+          <NavLink href="#">Sobre mim</NavLink>
+        </NavLinks>
+      </Nav>
+    </Container>
+  );
+};
