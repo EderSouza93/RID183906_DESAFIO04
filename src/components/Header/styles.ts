@@ -55,7 +55,7 @@ export const NavLinks = styled.div<{ isOpen: boolean }>`
     justify-content: flex-start;
     gap: ${({ theme }) => theme.spacing[8]};
   }
-`
+`;
 
 export const NavLink = styled.a`
   position: relative;
