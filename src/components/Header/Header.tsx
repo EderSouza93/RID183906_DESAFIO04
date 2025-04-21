@@ -1,0 +1,45 @@
+import { useState, useEffect } from "react";
+import {
+  Container,
+  Nav,
+  NavLinks,
+  NavLink,
+  MobileMenuButton,
+  Logo,
+} from './styles';
+
+import { FaBars, FaTimes } from 'react-icons/fa';
+
+export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    const toggleMenu = () => setIsOpen(!isOpen)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    return (
+        <Container isScrolled={isScrolled}>
+            <Nav>
+                <Logo href="#">Portfolio</Logo>
+
+                <MobileMenuButton onClick={toggleMenu} aria-label="Toggle menu">
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </MobileMenuButton>
+
+                <NavLinks isOpen={isOpen}>
+                    <NavLink href="#">Projetos</NavLink>
+                    <NavLink href="#">Tecnologias</NavLink>
+                    <NavLink href="#">Sobre mim</NavLink>
+                </NavLinks>
+            </Nav>
+        </Container>
+    )
+}
