@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <Container isScrolled={isScrolled}>
       <Nav>
-        <Logo href="#">Portfolio</Logo>
+        <Logo href="#">Eder Souza</Logo>
 
         <MobileMenuButton onClick={toggleMenu} aria-label="Toggle menu">
           {isOpen ? <FaTimes /> : <FaBars />}
