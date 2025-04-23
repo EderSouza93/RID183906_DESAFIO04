@@ -35,7 +35,7 @@ export const Header = () => {
         </MobileMenuButton>
 
         <NavLinks isOpen={isOpen}>
-          <NavLink href="#">Projetos</NavLink>
+          <NavLink href="#projects">Projetos</NavLink>
           <NavLink href="#">Tecnologias</NavLink>
           <NavLink href="#">Sobre mim</NavLink>
         </NavLinks>
