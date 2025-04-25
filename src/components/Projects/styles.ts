@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing[16]} ${({ theme }) => theme.spacing[4]};
-`
+`;
 
 export const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
+  margin-top: ${({ theme }) => theme.spacing[20]};
   margin-bottom: ${({ theme }) => theme.spacing[10]};
   text-align: center;
 
