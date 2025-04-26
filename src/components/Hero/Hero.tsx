@@ -19,7 +19,13 @@ export const Hero = () => {
             soluções digitais que geram impacto real.
           </Subtitle>
           <CTA>
-            <Button>Saiba mais</Button>
+            <a
+              href="http://eder-souza-dev.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Saiba mais</Button>
+            </a>
           </CTA>
         </div>
         <ProfileImage>
