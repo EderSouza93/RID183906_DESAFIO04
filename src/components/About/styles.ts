@@ -10,8 +10,8 @@ export const Container = styled.section`
 export const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  margin-top: ${({ theme }) => theme.spacing[48]};
-  margin-bottom: ${({ theme }) => theme.spacing[10]};
+  margin-top: ${({ theme }) => theme.spacing[20]};
+  margin-bottom: ${({ theme }) => theme.spacing[20]};
   text-align: center;
 
   &::after {
