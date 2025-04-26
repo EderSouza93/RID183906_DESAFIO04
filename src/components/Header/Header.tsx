@@ -36,7 +36,7 @@ export const Header = () => {
 
         <NavLinks isOpen={isOpen}>
           <NavLink href="#projects">Projetos</NavLink>
-          <NavLink href="#">Tecnologias</NavLink>
+          <NavLink href="#technologies">Tecnologias</NavLink>
           <NavLink href="#about">Sobre mim</NavLink>
         </NavLinks>
       </Nav>
